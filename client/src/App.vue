@@ -1,18 +1,23 @@
 <template>
   <div id="app">
     <v-app>
-      <v-content>
-        <v-container>
-          <router-view/>
+      <page-header />
+      <main align-items:center>
+        <v-container fluid>
+          <router-view></router-view>
         </v-container>
-      </v-content>
+      </main>
     </v-app>
   </div>
 </template>
 
 <script>
+import PageHeader from '@/components/PageHeader'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    PageHeader
+  }
 }
 </script>
 
@@ -23,6 +28,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
